@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#757575"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="176dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical">
+
+        <!--  Name label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="First Tag: (required)"
+            android:textSize="18sp" />
+
+        <!-- Name field -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/first_tag_type"
+                android:layout_width="152dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <AutoCompleteTextView
+                android:id="@+id/first_tag"
+                android:layout_width="176dp"
+                android:layout_height="37dp"
+                android:background="@android:drawable/editbox_background"
+                android:hint="value"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/conjunction_box"
+            android:layout_width="200dp"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="Second Tag: (optional)"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/second_tag_type"
+                android:layout_width="152dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <AutoCompleteTextView
+                android:id="@+id/second_tag"
+                android:layout_width="176dp"
+                android:layout_height="37dp"
+                android:background="@android:drawable/editbox_background"
+                android:hint="value"
+                android:singleLine="true" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="20dp">
+
+        <Button
+            android:id="@+id/search_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:onClick="edit"
+            android:drawableLeft="@drawable/ic_action_search"
+            android:text="Search"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

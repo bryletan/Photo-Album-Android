@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Android03</string>
+    <string name="addButton">Add</string>
+    <string name="removeButton">Remove</string>
+    <string name="name_label">Album Name: (required)</string>
+    <string name="previous"><![CDATA[<]]></string>
+    <string name="next"><![CDATA[>]]></string>
+</resources>

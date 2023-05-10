@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ShowPhoto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#757575"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintBottom_toTopOf="@+id/image_display"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <ImageView
+        android:id="@+id/image_display"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="18dp"
+        android:layout_weight="1.0"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="1.0"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/prev_button"
+            android:layout_width="55dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_action_prev"
+            style="?android:attr/borderlessButtonStyle" />
+
+        <TextView
+            android:id="@+id/tag_view"
+            android:layout_width="125dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="TextView"
+            android:textAlignment="center" />
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:alpha="0.25"
+            android:background="#000000" />
+
+        <LinearLayout
+            android:layout_width="148dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="31dp"
+                android:text="Add Tags"
+                android:textAlignment="center" />
+
+            <Spinner
+                android:id="@+id/tag_type_cbox"
+                android:layout_width="match_parent"
+                android:layout_height="29dp"
+                android:minHeight="48dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/tag_value_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter value..."
+                android:inputType="textPersonName"
+                android:singleLine="true"
+                android:textAlignment="viewStart"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/confirmation_button"
+                    android:layout_width="75dp"
+                    android:layout_height="32dp"
+                    android:text="Add"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/deletion_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:text="Delete"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/next_button"
+            android:layout_width="55dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_action_next"
+            style="?android:attr/borderlessButtonStyle" />
+    </LinearLayout>
+
+</LinearLayout>
